@@ -342,7 +342,7 @@ fn draw_borders(stdout: &mut std::io::Stdout, character: char) {
     let height = size.1;
     let (current_x, current_y) = termion::cursor::DetectCursorPos::cursor_pos(stdout).unwrap();
 
-    write!(stdout, "{}flowgen by eri", termion::cursor::Goto(2, 1),).unwrap();
+    write!(stdout, "{}flowdraw by eri", termion::cursor::Goto(2, 1),).unwrap();
     // draw top bar
     for i in 1..width {
         write!(stdout, "{}─", termion::cursor::Goto(i, 1 + 1)).unwrap();
